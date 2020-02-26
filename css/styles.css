@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300i,400,700&display=swap");
 
 :root {
-  --starter: #bfc946;
-  --fast: #36cccb;
-  --strong: #e78900;
-  --proffessional: #f04e4e;
+  --green: #bfc946;
+  --blue: #36cccb;
+  --orange: #e78900;
+  --red: #f04e4e;
+  --gray: #363636;
+  --light-gray: #fafafa;
 }
 
 * {
@@ -37,4 +39,68 @@ img {
 button {
   outline: none;
   cursor: pointer;
+}
+
+/* Main Container */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tabs Container */
+.tabs-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+/* Header Container */
+.tabs-container .tabs-header {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tabs-container .tabs-header .item-header {
+  /* Container */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /* default */
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-color: var(--gray);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 1.5em;
+}
+
+.tabs-container .tabs-header .item-header p {
+  /* Items */
+  flex: 1 1 300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.tabs-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.tabs-body .stater-item {
+  max-width: 1108px;
+  margin: 0 auto;
+  background-color: var(--green);
+  z-index: -1;
+}
+
+.tabs-body .stater-item:hover {
+  max-width: 1200px;
+}
+
+.tabs-body .tabs-item {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--gray);
 }
