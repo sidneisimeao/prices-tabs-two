@@ -88,14 +88,15 @@ button {
   background-color: white;
 }
 
-.tabs-body .stater-item {
-  max-width: 1108px;
+.tabs-body .bg-item {
+  max-width: 1100px;
   margin: 0 auto;
-  background-color: var(--green);
   z-index: -1;
+  transition: all 0.7s ease-out;
+  border-radius: 10px;
 }
 
-.tabs-body .stater-item:hover {
+.tabs-body .bg-item:hover {
   max-width: 1200px;
 }
 
@@ -103,4 +104,44 @@ button {
   max-width: 1100px;
   margin: 0 auto;
   background-color: var(--gray);
+}
+
+.tabs-body .tabs-item {
+  border-right: 7px solid transparent;
+}
+
+/* Starter Item */
+.starter {
+  background-color: var(--green);
+}
+
+.starter .tabs-item {
+  border-color: var(--green);
+}
+
+/* Fast Item */
+.fast {
+  background-color: var(--blue);
+}
+
+.fast .tabs-item {
+  border-color: var(--blue);
+}
+
+/* Strong Item */
+.strong {
+  background-color: var(--orange);
+}
+
+.strong .tabs-item {
+  border-color: var(--orange);
+}
+
+/* Proffesional Item */
+.proffesional {
+  background-color: var(--red);
+}
+
+.proffesional .tabs-item {
+  border-color: var(--red);
 }
