@@ -86,31 +86,77 @@ button {
 .tabs-body {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: white;
 }
 
 .tabs-body .bg-item {
   max-width: 1100px;
   margin: 0 auto;
   z-index: -1;
-  transition: all 0.7s ease-out;
+  transition: max-width 0.3s ease-out;
   border-radius: 10px;
 }
 
 .tabs-body .bg-item:hover {
   max-width: 1200px;
+  box-shadow: 3px 16px 16px -5px rgb(0, 0, 0, 0.3);
 }
 
 .tabs-body .tabs-item {
+  /* Container */
   display: flex;
-  min-height: 220px;
   flex-direction: row; /* default */
-  justify-content: space-around;
   align-items: center;
+  /* Others */
   max-width: 1100px;
+  min-height: 220px;
   margin: 0 auto;
   background-color: var(--gray);
   border-right: 7px solid transparent;
+  background-color: white;
+}
+
+/* All items plan */
+.tabs-body .tabs-item .item-plan {
+  /* Container */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* Item */
+  flex: 1 1 312px;
+  /* Others */
+  max-width: 400px;
+  min-height: 220px;
+  background-color: #2e2e2e;
+  padding-left: 50px;
+}
+
+.tabs-body .tabs-item .item-plan h3 {
+  font-size: 2.2em;
+  font-weight: normal;
+}
+
+.tabs-body .tabs-item .item-plan p {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.8em;
+  color: #657278;
+}
+
+.tabs-body .tabs-item:hover .item-plan h3,
+.tabs-body .tabs-item:hover .item-plan p {
+  color: white;
+}
+
+.item-feature {
+  max-width: 380px;
+  flex: 1 1 312px;
+}
+
+.tabs-item .item-price {
+  max-width: 320px;
+  flex: 1 1 312px;
 }
 
 /* Starter Item */
@@ -122,6 +168,14 @@ button {
   border-color: var(--green);
 }
 
+.starter .item-plan h3 {
+  color: var(--green);
+}
+
+.starter:hover .item-plan {
+  background-color: var(--green);
+}
+
 /* Fast Item */
 .fast {
   background-color: var(--blue);
@@ -129,6 +183,14 @@ button {
 
 .fast .tabs-item {
   border-color: var(--blue);
+}
+
+.fast .item-plan h3 {
+  color: var(--blue);
+}
+
+.fast:hover .item-plan {
+  background-color: var(--blue);
 }
 
 /* Strong Item */
@@ -140,6 +202,14 @@ button {
   border-color: var(--orange);
 }
 
+.strong .item-plan h3 {
+  color: var(--orange);
+}
+
+.strong:hover .item-plan {
+  background-color: var(--orange);
+}
+
 /* Proffesional Item */
 .proffesional {
   background-color: var(--red);
@@ -148,6 +218,15 @@ button {
 .proffesional .tabs-item {
   border-color: var(--red);
 }
+
+.proffesional .item-plan h3 {
+  color: var(--red);
+}
+
+.proffesional:hover .item-plan {
+  background-color: var(--red);
+}
+
 /* flex-direction break-point */
 @media (max-width: 1214px) {
   /* hidden tab headers */
