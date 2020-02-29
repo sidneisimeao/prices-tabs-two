@@ -83,20 +83,34 @@ button {
 
 /* Tabs Body */
 .tabs-body {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .tabs-body .tab-items-bg {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*
+.tabs-body .tab-items-bg {
   max-width: 1100px;
   margin: 0 auto;
   z-index: -1;
-  transition: max-width 0.3s ease-out;
+  transition: max-width 0.5s ease-out;
   border-radius: 10px;
 }
 
+.tabs-body .tab-items-bg:hover {
+  max-width: 1200px;
+  box-shadow: 3px 10px 10px 10px rgb(0, 0, 0, 0.1);
+  z-index: 1;
+}
+*/
+
 .tabs-body .tab-items {
   /* Container */
+  position: relative;
   display: flex;
   flex-direction: row; /* default */
   align-items: center;
@@ -105,15 +119,16 @@ button {
   min-height: 220px;
   margin: 0 auto;
   border-right: 8px solid transparent;
-  background-color: white;
+  transition: all 0.5s ease-out;
 }
 
-.tabs-body .tab-items-bg:hover {
+.tab-items:hover {
   max-width: 1200px;
-  box-shadow: 3px 16px 16px -5px rgb(0, 0, 0, 0.3);
-}
-.tabs-body .tab-items-bg:hover + .tab-items-bg .tab-items {
-  box-shadow: inset 3px 15px 25px rgba(220, 220, 210, 0.5);
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-shadow: 1px 10px 30px 20px rgb(100, 100, 100, 0.1);
+  z-index: 1;
 }
 
 /* All items  */
@@ -240,6 +255,11 @@ button {
 .tab-items .item-price {
   max-width: 320px;
   flex: 1 1 312px;
+  /* Container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Starter Item */
