@@ -157,7 +157,7 @@ button {
 }
 
 .tabs-body .tab-items .item-plan:hover::before {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .tabs-body .tab-items .item-plan::after {
