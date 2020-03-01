@@ -123,6 +123,7 @@ button {
 .tabs-body .tab-items .item-plan,
 .tabs-body .tab-items .item-feature,
 .tabs-body .tab-items .item-price {
+  flex: 1 1 312px;
   min-height: 220px;
 }
 
@@ -135,10 +136,8 @@ button {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-  /* Item */
-  flex: 1 1 312px;
   /* Others */
-  max-width: 400px;
+  max-height: 220px;
   background-color: #2e2e2e;
   padding-left: 80px;
   transition: background-color 0.5s ease-out;
@@ -196,8 +195,6 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* Item */
-  flex: 1 1 312px;
   /* Others */
   max-width: 380px;
   position: relative;
@@ -276,7 +273,6 @@ button {
 
 .tab-items .item-price {
   max-width: 320px;
-  flex: 1 1 312px;
   /* Container */
   display: flex;
   justify-content: center;
@@ -392,13 +388,57 @@ button {
   }
   .tabs-body {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
   }
 
   .tabs-body .tab-items {
-    min-height: 220px;
-    border-right: 0px solid transparent;
+    flex: 1 1 312px;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 0.8em;
+    margin: 20px;
+    border-right: 0;
+    overflow: hidden;
+  }
+
+  .tabs-body .tab-items .item-plan {
+    padding: 40px;
+  }
+
+  .item-feature li {
+    flex-direction: column;
+    /* Container 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ededed;
+    font-size: 0.88em;
+    font-weight: 600;
+    */
+  }
+
+  .tab-items .item-price {
+    flex: 1 1 315px;
+    /* Container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .tabs-body .tab-items .item-plan::after {
+    width: 0;
+    height: 0;
+    border-right: 45px solid transparent;
+    border-left: 45px solid transparent;
+    border-top: 20px solid #2e2e2e;
+    content: "";
+    bottom: -60px;
+    left: 0;
+    margin-left: 37.5%;
+    position: absolute;
+    z-index: 1;
+    transition: border-left-color 0.5s ease-out;
   }
 }
