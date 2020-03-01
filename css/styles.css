@@ -428,11 +428,7 @@ button {
   .tab-items .item-price {
     flex: 1 1 315px;
     max-width: 340px;
-    /* Container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    max-height: 150px;
   }
 
   .starter:hover .item-plan::after {
